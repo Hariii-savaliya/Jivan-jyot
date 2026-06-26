@@ -1,0 +1,61 @@
+{
+  "name": "Event",
+  "type": "object",
+  "properties": {
+    "title_gu": {
+      "type": "string"
+    },
+    "title_en": {
+      "type": "string"
+    },
+    "title_hi": {
+      "type": "string"
+    },
+    "description_gu": {
+      "type": "string"
+    },
+    "description_en": {
+      "type": "string"
+    },
+    "description_hi": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "time": {
+      "type": "string"
+    },
+    "location_gu": {
+      "type": "string"
+    },
+    "location_en": {
+      "type": "string"
+    },
+    "location_hi": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "upcoming",
+        "completed"
+      ]
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "gallery_urls": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "title_en",
+    "date",
+    "status"
+  ]
+}

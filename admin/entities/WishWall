@@ -1,0 +1,63 @@
+{
+  "name": "WishWall",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Medical",
+        "Education",
+        "Food",
+        "Clothing",
+        "Infrastructure",
+        "Equipment",
+        "Other"
+      ]
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "Low",
+        "Medium",
+        "High",
+        "Urgent"
+      ],
+      "default": "Medium"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Open",
+        "In Progress",
+        "Fulfilled",
+        "Closed"
+      ],
+      "default": "Open"
+    },
+    "requested_by": {
+      "type": "string"
+    },
+    "fulfilled_by": {
+      "type": "string"
+    },
+    "estimated_cost": {
+      "type": "number"
+    },
+    "target_date": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "required": [
+    "title",
+    "category",
+    "priority",
+    "status"
+  ]
+}

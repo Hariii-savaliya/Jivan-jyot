@@ -1,0 +1,39 @@
+{
+  "name": "DonationSubmission",
+  "type": "object",
+  "properties": {
+    "donor_name": {
+      "type": "string"
+    },
+    "mobile": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "number"
+    },
+    "transaction_id": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "screenshot_url": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "verified",
+        "rejected"
+      ],
+      "default": "pending"
+    }
+  },
+  "required": [
+    "donor_name",
+    "mobile",
+    "amount",
+    "transaction_id"
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "name": "Event",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "event_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "location": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Upcoming",
+        "Ongoing",
+        "Completed",
+        "Cancelled"
+      ],
+      "default": "Upcoming"
+    },
+    "budget": {
+      "type": "number"
+    },
+    "spent": {
+      "type": "number",
+      "default": 0
+    },
+    "volunteers_assigned": {
+      "type": "number",
+      "default": 0
+    },
+    "attendees": {
+      "type": "number",
+      "default": 0
+    },
+    "gallery_images": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "coordinator": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Health Camp",
+        "Education",
+        "Cultural",
+        "Sports",
+        "Fundraising",
+        "Community",
+        "Other"
+      ]
+    }
+  },
+  "required": [
+    "title",
+    "event_date",
+    "status"
+  ]
+}
