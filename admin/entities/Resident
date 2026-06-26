@@ -1,0 +1,64 @@
+{
+  "name": "Resident",
+  "type": "object",
+  "properties": {
+    "resident_id": {
+      "type": "string"
+    },
+    "photo": {
+      "type": "string",
+      "format": "uri"
+    },
+    "name": {
+      "type": "string"
+    },
+    "age": {
+      "type": "number"
+    },
+    "gender": {
+      "type": "string",
+      "enum": [
+        "Male",
+        "Female",
+        "Other"
+      ]
+    },
+    "medical_notes": {
+      "type": "string"
+    },
+    "guardian_name": {
+      "type": "string"
+    },
+    "guardian_phone": {
+      "type": "string"
+    },
+    "guardian_relation": {
+      "type": "string"
+    },
+    "admission_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Active",
+        "Discharged",
+        "Transferred"
+      ],
+      "default": "Active"
+    },
+    "blood_group": {
+      "type": "string"
+    },
+    "emergency_contact": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "age",
+    "gender",
+    "status"
+  ]
+}

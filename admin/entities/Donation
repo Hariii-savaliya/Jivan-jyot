@@ -1,0 +1,59 @@
+{
+  "name": "Donation",
+  "type": "object",
+  "properties": {
+    "donor_name": {
+      "type": "string"
+    },
+    "donor_id": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "number"
+    },
+    "transaction_id": {
+      "type": "string"
+    },
+    "donation_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "screenshot": {
+      "type": "string",
+      "format": "uri"
+    },
+    "verification_status": {
+      "type": "string",
+      "enum": [
+        "Pending",
+        "Verified",
+        "Rejected",
+        "Approved"
+      ],
+      "default": "Pending"
+    },
+    "payment_method": {
+      "type": "string",
+      "enum": [
+        "Cash",
+        "Bank Transfer",
+        "UPI",
+        "Credit Card",
+        "Cheque",
+        "Online",
+        "Other"
+      ]
+    },
+    "purpose": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "donor_name",
+    "amount",
+    "verification_status"
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "name": "Volunteer",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "photo": {
+      "type": "string",
+      "format": "uri"
+    },
+    "skills": {
+      "type": "string"
+    },
+    "total_hours": {
+      "type": "number",
+      "default": 0
+    },
+    "events_participated": {
+      "type": "number",
+      "default": 0
+    },
+    "join_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Active",
+        "Inactive",
+        "On Leave"
+      ],
+      "default": "Active"
+    },
+    "address": {
+      "type": "string"
+    },
+    "availability": {
+      "type": "string",
+      "enum": [
+        "Weekdays",
+        "Weekends",
+        "Both",
+        "Flexible"
+      ],
+      "default": "Flexible"
+    },
+    "certificate_issued": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "name",
+    "status"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "name": "WishItem",
+  "type": "object",
+  "properties": {
+    "title_gu": {
+      "type": "string"
+    },
+    "title_en": {
+      "type": "string"
+    },
+    "title_hi": {
+      "type": "string"
+    },
+    "description_gu": {
+      "type": "string"
+    },
+    "description_en": {
+      "type": "string"
+    },
+    "description_hi": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "education",
+        "health",
+        "food",
+        "supplies"
+      ]
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "quantity_needed": {
+      "type": "number"
+    },
+    "quantity_fulfilled": {
+      "type": "number",
+      "default": 0
+    },
+    "icon": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title_en",
+    "category",
+    "priority",
+    "quantity_needed"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "name": "QRDonation",
+  "type": "object",
+  "properties": {
+    "qr_image": {
+      "type": "string",
+      "format": "uri"
+    },
+    "bank_name": {
+      "type": "string"
+    },
+    "account_number": {
+      "type": "string"
+    },
+    "ifsc_code": {
+      "type": "string"
+    },
+    "upi_id": {
+      "type": "string"
+    },
+    "account_holder": {
+      "type": "string"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    },
+    "total_received": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "bank_name"
+  ]
+}

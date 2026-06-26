@@ -1,0 +1,49 @@
+{
+  "name": "Volunteer",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string"
+    },
+    "mobile": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "address": {
+      "type": "string"
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "interests": {
+      "type": "string"
+    },
+    "availability": {
+      "type": "string",
+      "enum": [
+        "weekdays",
+        "weekends",
+        "both"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "approved",
+        "active"
+      ],
+      "default": "pending"
+    }
+  },
+  "required": [
+    "full_name",
+    "mobile"
+  ]
+}

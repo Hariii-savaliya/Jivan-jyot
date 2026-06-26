@@ -1,0 +1,61 @@
+{
+  "name": "Donor",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "total_donated": {
+      "type": "number",
+      "default": 0
+    },
+    "donation_count": {
+      "type": "number",
+      "default": 0
+    },
+    "first_donation_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "last_donation_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "donor_type": {
+      "type": "string",
+      "enum": [
+        "Individual",
+        "Corporate",
+        "Trust",
+        "Government",
+        "Anonymous"
+      ],
+      "default": "Individual"
+    },
+    "pan_number": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Active",
+        "Inactive"
+      ],
+      "default": "Active"
+    }
+  },
+  "required": [
+    "name",
+    "donor_type"
+  ]
+}
